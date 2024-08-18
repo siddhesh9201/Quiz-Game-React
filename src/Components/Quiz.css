@@ -1,12 +1,12 @@
 .quiz-container {
-    background: linear-gradient(45deg, #c7278f, #13b4b1);
-    padding: 10px;
-    max-width: 500px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Arial, sans-serif;
-    transition: background 1s ease;
-    margin: auto;
+  background: linear-gradient(45deg, #c7278f, #13b4b1);
+  padding: 10px;
+  max-width: 500px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: background 1s ease;
+  margin: auto;
 }
 
 /* Interactive gradient on hover */
@@ -14,284 +14,285 @@
     background: linear-gradient(45deg, #deee62, #a29bfe);
 } */
 
-/* Style for the button */
 .quiz-container button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background-color: #52dbe3; /* Fresh color */
-    color: rgba(255, 255, 255, 0.476);
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Softer shadow */
-    position: relative;
-    overflow: hidden;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background-color: #52dbe3;
+  color: rgba(255, 255, 255, 0.476);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hover effect for the button */
 .quiz-container button:hover {
-    background-color: #dfa650; /* Darker color on hover */
-    box-shadow: 0 8px 16px rgba(25, 8, 8, 0.4); /* Stronger shadow */
-    transform: scale(1.05); /* Slightly scale up */
+  background-color: #dfa650;
+  box-shadow: 0 8px 16px rgba(25, 8, 8, 0.4);
+  transform: scale(1.05);
 }
 
-/* Animated border effect */
 .quiz-container button:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.3); /* Light overlay color */
-    border-radius: 50%;
-    transition: width 0.3s ease, height 0.3s ease;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
-
 
 .quiz-container ul {
-    list-style-type: none;
-    padding: 0;
-    position: relative;
-    margin: auto;
-    max-width: 300px;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  max-width: 300px;
 }
 
 .quiz-container li {
-    position: relative; /* Required for ::before positioning */
-    margin: 10px 0;
-    padding: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent; /* Transparent border initially */
+  position: relative;
+  margin: 10px 0;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
 }
 
-/* Hover effect for list items */
 .quiz-container li:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Glowing effect for wrong answer */
 .quiz-container li.wrong {
-    border-color: rgb(234, 63, 36); /* Red border for wrong answer */
-    box-shadow: 0 0 10px rgba(234, 63, 36, 0.8); /* Glowing red shadow */
-    animation: pulse-red 1s ease-out; /* Pulse effect */
+  border-color: rgb(234, 63, 36);
+  box-shadow: 0 0 10px rgba(234, 63, 36, 0.8);
+  animation: pulse-red 1s ease-out;
 }
 
-/* Glowing effect for correct answer */
 .quiz-container li.correct {
-    border-color: rgb(53, 221, 53); /* Green border for correct answer */
-    box-shadow: 0 0 10px rgba(53, 221, 53, 0.8); /* Glowing green shadow */
-    animation: pulse-green 1s ease-out; /* Pulse effect */
+  border-color: rgb(53, 221, 53);
+  box-shadow: 0 0 10px rgba(53, 221, 53, 0.8);
+  animation: pulse-green 1s ease-out;
 }
-
-/* Pulsing animations */
 @keyframes pulse-red {
-    0% { box-shadow: 0 0 10px rgba(234, 63, 36, 0.8); }
-    50% { box-shadow: 0 0 20px rgba(234, 63, 36, 1); }
-    100% { box-shadow: 0 0 10px rgba(234, 63, 36, 0.8); }
+  0% {
+    box-shadow: 0 0 10px rgba(234, 63, 36, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(234, 63, 36, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(234, 63, 36, 0.8);
+  }
 }
 
 @keyframes pulse-green {
-    0% { box-shadow: 0 0 10px rgba(53, 221, 53, 0.8); }
-    50% { box-shadow: 0 0 20px rgba(53, 221, 53, 1); }
-    100% { box-shadow: 0 0 10px rgba(53, 221, 53, 0.8); }
+  0% {
+    box-shadow: 0 0 10px rgba(53, 221, 53, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(53, 221, 53, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(53, 221, 53, 0.8);
+  }
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: #f0f4f8; /* Light background for contrast */
-  }
-  
-  .result-window {
-    background: #ffffff;
-    padding: 20px 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .result-window:hover {
-    box-shadow: 0 10px 30px rgba(0, 200, 255, 0.6), 0 0 40px rgba(0, 200, 255, 0.8); /* Glow effect */
-    transform: scale(1.05); /* Slight zoom on hover */
-  }
-  
-  .result-message {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #333;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 0;
-    letter-spacing: 0.5px;
-  }
-  
-  .result-window::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg, rgba(0, 200, 255, 0.4), rgba(0, 255, 150, 0.4));
-    border-radius: 12px;
-    filter: blur(20px);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .result-window:hover::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f0f4f8;
+}
+
+.result-window {
+  background: #ffffff;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.result-window:hover {
+  box-shadow: 0 10px 30px rgba(0, 200, 255, 0.6),
+    0 0 40px rgba(0, 200, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.result-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.result-window::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 200, 255, 0.4),
+    rgba(0, 255, 150, 0.4)
+  );
+  border-radius: 12px;
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.result-window:hover::before {
+  opacity: 1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c3e50;
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+}
+
+.celebration {
+  position: relative;
+  text-align: center;
+}
+
+.congrats-message {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 18px;
+  background-color: hsl(calc(360 * var(--hue)), 100%, 50%);
+  opacity: 0;
+  animation: drop 5s linear infinite, spin 2s linear infinite;
+}
+
+/* Falling animation */
+@keyframes drop {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
     opacity: 1;
   }
-  
-  
- 
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2c3e50;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-  }
-  
-  .celebration {
-    position: relative;
-    text-align: center;
-  }
-  
-  .congrats-message {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 20px;
-    z-index: 2;
-    position: relative;
-  }
-  
-  .confetti-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-  }
-  
-  .confetti {
-    position: absolute;
-    width: 8px;
-    height: 18px;
-    background-color: hsl(calc(360 * var(--hue)), 100%, 50%);
+  100% {
+    transform: translateY(100vh) rotate(360deg);
     opacity: 0;
-    animation: drop 5s linear infinite, spin 2s linear infinite;
   }
-  
-  /* Falling animation */
-  @keyframes drop {
-    0% {
-      transform: translateY(-10vh) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(360deg);
-      opacity: 0;
-    }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  /* Spinning animation */
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  
-  /* Position and style confetti randomly */
-  .confetti:nth-child(1) {
-    left: 10%;
-    animation-delay: 0.2s;
-    --hue: 0.1;
-  }
-  .confetti:nth-child(2) {
-    left: 20%;
-    animation-delay: 0.5s;
-    --hue: 0.2;
-  }
-  .confetti:nth-child(3) {
-    left: 30%;
-    animation-delay: 0.1s;
-    --hue: 0.3;
-  }
-  .confetti:nth-child(4) {
-    left: 40%;
-    animation-delay: 0.3s;
-    --hue: 0.4;
-  }
-  .confetti:nth-child(5) {
-    left: 50%;
-    animation-delay: 0.4s;
-    --hue: 0.5;
-  }
-  .confetti:nth-child(6) {
-    left: 60%;
-    animation-delay: 0.6s;
-    --hue: 0.6;
-  }
-  .confetti:nth-child(7) {
-    left: 70%;
-    animation-delay: 0.7s;
-    --hue: 0.7;
-  }
-  .confetti:nth-child(8) {
-    left: 80%;
-    animation-delay: 0.9s;
-    --hue: 0.8;
-  }
-  .confetti:nth-child(9) {
-    left: 90%;
-    animation-delay: 0.2s;
-    --hue: 0.9;
-  }
-  .confetti:nth-child(10) {
-    left: 95%;
-    animation-delay: 0.8s;
-    --hue: 1;
-  }
-  
-  /* Style for the marks-container div */
-/* Style for the marks-container div */
-.marks-container {
-    background-color: #ffffff; /* White background for clarity */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    padding: 20px; /* Space inside the container */
-    max-width: 300px; /* Maximum width of the container */
-    margin: 20px auto; /* Center the container horizontally with margin */
-    text-align: center; /* Center text inside the container */
-    border: 2px solid #007bff; /* Blue border for emphasis */
+}
+
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-delay: 0.2s;
+  --hue: 0.1;
+}
+.confetti:nth-child(2) {
+  left: 20%;
+  animation-delay: 0.5s;
+  --hue: 0.2;
+}
+.confetti:nth-child(3) {
+  left: 30%;
+  animation-delay: 0.1s;
+  --hue: 0.3;
+}
+.confetti:nth-child(4) {
+  left: 40%;
+  animation-delay: 0.3s;
+  --hue: 0.4;
+}
+.confetti:nth-child(5) {
+  left: 50%;
+  animation-delay: 0.4s;
+  --hue: 0.5;
+}
+.confetti:nth-child(6) {
+  left: 60%;
+  animation-delay: 0.6s;
+  --hue: 0.6;
+}
+.confetti:nth-child(7) {
+  left: 70%;
+  animation-delay: 0.7s;
+  --hue: 0.7;
+}
+.confetti:nth-child(8) {
+  left: 80%;
+  animation-delay: 0.9s;
+  --hue: 0.8;
+}
+.confetti:nth-child(9) {
+  left: 90%;
+  animation-delay: 0.2s;
+  --hue: 0.9;
+}
+.confetti:nth-child(10) {
+  left: 95%;
+  animation-delay: 0.8s;
+  --hue: 1;
 }
 
 .marks-container {
-    font-size: 36px; /* Large font size for the number */
-    color: #333; /* Dark color for the text */
-    font-weight: bold; /* Bold text for emphasis */
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #007bff;
 }
 
+.marks-container {
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+}
